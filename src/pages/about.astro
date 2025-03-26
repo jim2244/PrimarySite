@@ -5,7 +5,7 @@ import Layout from '../layouts/BlogPost.astro';
 	title="About Morris IT Consulting - Veteran-Owned Security Solutions"
 	description="Meet James Morris, CISSP - Former USAF veteran with over a decade of experience in IT security, offering enterprise-grade security solutions for businesses of all sizes."
 	pubDate={new Date('March 26, 2025')}
-	heroImage="/about-hero.png"
+	heroImage="/about-hero.svg"
 >
 	<div class="about-section">
 		<h2>Veteran-Owned. Security-Focused. Results-Driven.</h2>
@@ -95,34 +95,44 @@ import Layout from '../layouts/BlogPost.astro';
 	}
 	
 	.skill-category {
-		background-color: rgba(var(--gray-dark), 0.4);
+		background-color: rgba(35, 40, 50, 0.7); /* Brighter background */
 		border-radius: 8px;
 		padding: 1.5rem;
-		border: 1px solid rgba(var(--gray), 0.1);
+		border: 1px solid rgba(150, 155, 165, 0.2); /* Brighter border */
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
 	}
 	
 	.skill-category h4 {
 		margin-top: 0;
 		color: var(--accent);
+		margin-bottom: 1rem; /* Added space below heading */
 	}
 	
 	.skill-category ul {
 		padding-left: 1.5rem;
 		margin-bottom: 0;
+		list-style-type: square; /* Changed bullet style */
+	}
+	
+	.skill-category li {
+		color: rgba(240, 245, 255, 0.9); /* Brighter text for list items */
+		margin-bottom: 0.5rem; /* Added space between list items */
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
 	}
 	
 	.cta-section {
 		margin-top: 3rem;
 		padding: 2rem;
-		background-color: rgba(var(--gray-dark), 0.4);
+		background-color: rgba(35, 40, 50, 0.7); /* Matching background */
 		border-radius: 8px;
 		text-align: center;
+		border: 1px solid rgba(150, 155, 165, 0.2); /* Matching border */
 	}
 	
 	.cta-button {
 		display: inline-block;
 		background-color: var(--accent);
-		color: rgb(var(--black));
+		color: rgb(10, 12, 16); /* Ensure text is dark on button */
 		padding: 0.75rem 1.5rem;
 		border-radius: 4px;
 		font-weight: 600;
@@ -133,7 +143,7 @@ import Layout from '../layouts/BlogPost.astro';
 	
 	.cta-button:hover {
 		background-color: white;
-		box-shadow: var(--neon-glow);
+		box-shadow: 0 0 5px rgba(0, 184, 255, 0.2), 0 0 20px rgba(0, 184, 255, 0.1); /* Using the glow variable */
 		text-decoration: none;
 	}
 	
