@@ -10,12 +10,13 @@
   --gray-light: 40, 45, 55;
   --gray-dark: 25, 30, 40;
   --background: 15, 20, 30;
-  --text: 220, 225, 235;
+  --text: 240, 245, 255; /* Brightened text color for better contrast */
   --code-bg: 30, 35, 50;
   --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4),
     0 8px 24px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
   --neon-glow: 0 0 5px rgba(0, 184, 255, 0.2), 
     0 0 20px rgba(0, 184, 255, 0.1);
+  --card-bg: rgba(35, 40, 50, 0.7); /* Brighter background for cards */
 }
 
 @font-face {
@@ -49,6 +50,7 @@ body {
   color: rgb(var(--text));
   font-size: 18px;
   line-height: 1.7;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Text shadow for better readability */
 }
 
 main {
@@ -76,15 +78,19 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); /* Added drop shadow for better visibility */
 }
 
 h2 {
   font-size: 2.441em;
   color: var(--accent);
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5)); /* Added drop shadow for better visibility */
 }
 
 h3 {
   font-size: 1.953em;
+  color: var(--accent); /* Explicitly setting h3 to accent color */
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); /* Added drop shadow for better visibility */
 }
 
 h4 {
@@ -116,6 +122,7 @@ a:hover {
 
 p {
   margin-bottom: 1em;
+  color: rgb(var(--text)); /* Explicitly setting paragraph color */
 }
 
 .prose p {
@@ -216,18 +223,33 @@ hr {
 }
 
 .card, article {
-  background-color: rgba(var(--gray-dark), 0.4);
+  background-color: var(--card-bg);
   border-radius: 8px;
   padding: 1.5em;
   margin: 1em 0;
   box-shadow: var(--box-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid rgba(var(--gray), 0.1);
+  border: 1px solid rgba(var(--gray), 0.2);
 }
 
 .card:hover, article:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow), var(--neon-glow);
+}
+
+/* About page specific styles */
+.about-section h3 {
+  color: var(--accent);
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(var(--gray), 0.2);
+}
+
+.cta-section {
+  background-color: var(--card-bg);
 }
 
 /* Header and Navigation */
@@ -270,7 +292,7 @@ footer {
   margin-top: 3em;
   padding: 2em 0;
   text-align: center;
-  color: rgba(var(--gray), 0.7);
+  color: rgba(var(--text), 0.7);
   font-size: 0.9em;
   border-top: 1px solid rgba(var(--gray), 0.2);
 }
