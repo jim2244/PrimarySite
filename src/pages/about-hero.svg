@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <!-- Background with tech grid pattern -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1520" />
+      <stop offset="100%" stop-color="#1a2535" />
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b8ff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0077cc" stop-opacity="0.4" />
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#00b8ff" stroke-width="0.5" stroke-opacity="0.15" />
+    </pattern>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)" />
+  <rect width="1200" height="400" fill="url(#grid)" />
+  
+  <!-- Abstract digital security elements -->
+  <!-- Shield element -->
+  <g transform="translate(900, 200) scale(0.8)">
+    <path d="M0,-120 L100,-70 V50 C100,100 50,120 0,150 C-50,120 -100,100 -100,50 V-70 Z" 
+          fill="none" stroke="#00b8ff" stroke-width="3" stroke-opacity="0.8" />
+    <path d="M0,-100 L75,-60 V30 C75,70 40,90 0,110 C-40,90 -75,70 -75,30 V-60 Z" 
+          fill="url(#glowGradient)" stroke="#00b8ff" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#00b8ff" stroke-width="2" />
+    <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#00b8ff" stroke-width="4" stroke-linecap="round" />
+  </g>
+  
+  <!-- Circuit board patterns -->
+  <g stroke="#00b8ff" stroke-width="2" stroke-opacity="0.6" fill="none">
+    <path d="M50,350 L150,350 L150,250 L350,250 L350,150" />
+    <path d="M250,350 L250,300 L450,300 L450,200" />
+    <path d="M370,350 L370,320 L550,320 L550,220 L650,220" />
+    <circle cx="150" cy="350" r="5" fill="#00b8ff" fill-opacity="0.6" />
+    <circle cx="350" cy="250" r="5" fill="#00b8ff" fill-opacity="0.6" />
+    <circle cx="350" cy="150" r="5" fill="#00b8ff" fill-opacity="0.6" />
+    <circle cx="450" cy="300" r="5" fill="#00b8ff" fill-opacity="0.6" />
+    <circle cx="450" cy="200" r="5" fill="#00b8ff" fill-opacity="0.6" />
+    <circle cx="550" cy="320" r="5" fill="#00b8ff" fill-opacity="0.6" />
+    <circle cx="550" cy="220" r="5" fill="#00b8ff" fill-opacity="0.6" />
+    <circle cx="650" cy="220" r="5" fill="#00b8ff" fill-opacity="0.6" />
+  </g>
+  
+  <!-- Military star element -->
+  <g transform="translate(200, 200) scale(0.6)">
+    <path d="M0,-150 L29,-46 L139,-46 L50,18 L79,121 L0,65 L-79,121 L-50,18 L-139,-46 L-29,-46 Z" 
+          fill="none" stroke="white" stroke-width="3" stroke-opacity="0.7" />
+    
+    <!-- Inner pentagon representing military connection -->
+    <path d="M0,-60 L57,-18 L35,60 L-35,60 L-57,-18 Z" 
+          fill="none" stroke="#00b8ff" stroke-width="2" stroke-opacity="0.9" />
+  </g>
+  
+  <!-- Digital data flow elements -->
+  <g stroke="#00b8ff" stroke-opacity="0.4" stroke-width="1" fill="none">
+    <!-- Horizontal data streams -->
+    <path d="M0,100 L1200,100" stroke-dasharray="10,15" />
+    <path d="M0,150 L1200,150" stroke-dasharray="5,10" />
+    <path d="M0,300 L1200,300" stroke-dasharray="15,10" />
+    
+    <!-- Binary data snippets -->
+    <text x="400" y="95" fill="#00b8ff" fill-opacity="0.6" font-family="monospace" font-size="12">10110101</text>
+    <text x="700" y="95" fill="#00b8ff" fill-opacity="0.6" font-family="monospace" font-size="12">01001110</text>
+    <text x="300" y="145" fill="#00b8ff" fill-opacity="0.6" font-family="monospace" font-size="12">11100010</text>
+    <text x="800" y="145" fill="#00b8ff" fill-opacity="0.6" font-family="monospace" font-size="12">00111001</text>
+    <text x="500" y="295" fill="#00b8ff" fill-opacity="0.6" font-family="monospace" font-size="12">10011101</text>
+    <text x="200" y="295" fill="#00b8ff" fill-opacity="0.6" font-family="monospace" font-size="12">01010111</text>
+  </g>
+  
+  <!-- Glow effect overlay -->
+  <circle cx="900" cy="200" r="150" fill="url(#glowGradient)" opacity="0.4" />
+  <circle cx="200" cy="200" r="120" fill="url(#glowGradient)" opacity="0.3" />
+</svg>
