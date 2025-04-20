@@ -7,72 +7,72 @@ import Layout from '../layouts/BlogPost.astro';
 	pubDate={new Date('March 26, 2025')}
 	heroImage="/about-hero.png"
 >
-	<div class="main-content">
+	<div class="container">
 		<!-- About Section -->
-		<section class="about-section animate-in">
-			<h2>Veteran-Owned. Security-Focused. Results-Driven.</h2>
-			<p>
+		<section class="section section--about fade-in">
+			<h2 class="section__title">Veteran-Owned. Security-Focused. Results-Driven.</h2>
+			<p class="section__text">
 				With over a decade of experience in cybersecurity and IT infrastructure, I bring military precision and enterprise-grade security expertise to businesses of all sizes. As the founder of Morris IT Consulting, I leverage my background as a United States Air Force veteran and senior security engineer to deliver robust, compliant, and innovative technology solutions.
 			</p>
 			
 			<div class="card">
-				<h3>Military-Grade Security Experience</h3>
-				<p>
+				<h3 class="card__title">Military-Grade Security Experience</h3>
+				<p class="card__text">
 					During my seven years of active duty with the United States Air Force, I engineered and implemented advanced security systems worth over $5 million, protecting critical infrastructure across multiple installations. This foundation in physical and digital security shaped my methodical approach to identifying vulnerabilities and implementing comprehensive protection strategies.
 				</p>
 			</div>
 			
 			<div class="card">
-				<h3>Credentials That Matter</h3>
-				<p>
+				<h3 class="card__title">Credentials That Matter</h3>
+				<p class="card__text">
 					As a Certified Information Systems Security Professional (CISSP) with multiple Microsoft and CompTIA certifications, I maintain the highest standards of security knowledge and ethical practice.
 				</p>
 			</div>
-			<h2>Technical Expertise</h2>
-			<div class="services">
+			<h2 class="section__title">Technical Expertise</h2>
+			<div class="services-grid">
 				<div class="service-card">
-					<div class="icon">☁️</div>
-					<h3>Cloud Security</h3>
-					<ul>
+					<div class="service-card__icon">☁️</div>
+					<h3 class="service-card__title">Cloud Security</h3>
+					<ul class="service-card__list">
 						<li>Azure, AWS, GCP environments</li>
 						<li>Cloud migration security</li>
 						<li>Identity and access management</li>
 					</ul>
 				</div>
 				<div class="service-card">
-					<div class="icon">🔒</div>
-					<h3>Security Operations</h3>
-					<ul>
+					<div class="service-card__icon">🔒</div>
+					<h3 class="service-card__title">Security Operations</h3>
+					<ul class="service-card__list">
 						<li>SIEM implementation (Splunk, QRadar, Sentinel)</li>
 						<li>Threat hunting and incident response</li>
 						<li>Vulnerability management</li>
 					</ul>
 				</div>
 				<div class="service-card">
-					<div class="icon">📋</div>
-					<h3>Compliance & Governance</h3>
-					<ul>
+					<div class="service-card__icon">📋</div>
+					<h3 class="service-card__title">Compliance & Governance</h3>
+					<ul class="service-card__list">
 						<li>NIST frameworks</li>
 						<li>FedRAMP certification</li>
 						<li>Security policy development</li>
 					</ul>
 				</div>
 			</div>
-			<h3>My Approach</h3>
-			<p>
+			<h3 class="section__subtitle">My Approach</h3>
+			<p class="section__text">
 				I believe in building security solutions that enable business, not hinder it. My consultancy focuses on practical, scalable security measures that protect your assets while supporting your operations and growth. Whether you need comprehensive security architecture or targeted improvements to your existing infrastructure, my approach combines technical expertise with clear communication and business alignment.
 			</p>
-			<h3>Why Choose a Veteran-Owned Business?</h3>
-			<p>
+			<h3 class="section__subtitle">Why Choose a Veteran-Owned Business?</h3>
+			<p class="section__text">
 				When you work with Morris IT Consulting, you're partnering with a business built on military values of discipline, integrity, and excellence. My service-oriented mindset means your security challenges become my mission, and I'm committed to delivering solutions that exceed expectations, on time and with precision.
 			</p>
 			
 			<!-- CTA Section -->
-			<div class="cta-section animate-in delay-3">
-				<p>
+			<div class="cta fade-in delay-3">
+				<p class="cta__text">
 					Ready to enhance your security posture with military-grade expertise? Contact me today to discuss how Morris IT Consulting can help protect your business while enabling your growth.
 				</p>
-				<a href="../#contact" class="primary-btn">Schedule a Consultation</a>
+				<a href="../#contact" class="btn btn--primary">Schedule a Consultation</a>
 			</div>
 		</section>
 	</div>
