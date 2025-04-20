@@ -13,48 +13,71 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<div class="main-content">
-				<h1>Professional IT Services</h1>
-				<p>
-					Welcome to my professional IT services. I provide reliable, efficient, and customized technology solutions to help your business thrive in today's digital environment. <br/><a href="#contact">Contact us now!</a>
-				</p>
-				
-				<div class="services">
-					<div class="service-card">
-						<div class="icon">💻</div>
-						<h3>Technical Support</h3>
-						<p>Responsive troubleshooting and technical assistance for all your hardware and software needs, with minimal downtime.</p>
+				<!-- Hero Section -->
+				<section class="hero animate-in">
+					<div class="hero-content">
+						<h1>Professional IT Services</h1>
+						<p class="tagline">
+							Reliable, efficient, and customized technology solutions to help your business thrive in today's digital environment.
+						</p>
+						<div class="hero-cta">
+							<a href="#contact" class="primary-btn">Get Started</a>
+							<a href="/about" class="secondary-btn">Learn More</a>
+						</div>
 					</div>
-					
-					<div class="service-card">
-						<div class="icon">🔒</div>
-						<h3>Network Security</h3>
-						<p>Comprehensive security solutions to protect your business data and infrastructure from evolving threats.</p>
-					</div>
-					
-					<div class="service-card">
-						<div class="icon">☁️</div>
-						<h3>Cloud Solutions</h3>
-						<p>Strategic cloud implementation and migration services to enhance accessibility and scalability.</p>
-					</div>
-				</div>
+				</section>
 				
-				<p>
-					<br /><br />With years of experience in the IT industry, I deliver tailored solutions that align with your business objectives and technical requirements.
-				</p>
+				<!-- Services Section -->
+				<section class="services-section animate-in delay-1">
+					<h2>Our Services</h2>
+					<div class="services">
+						<div class="service-card">
+							<div class="icon">💻</div>
+							<h3>Technical Support</h3>
+							<p>Responsive troubleshooting and technical assistance for all your hardware and software needs, with minimal downtime.</p>
+						</div>
+						
+						<div class="service-card">
+							<div class="icon">🔒</div>
+							<h3>Network Security</h3>
+							<p>Comprehensive security solutions to protect your business data and infrastructure from evolving threats.</p>
+						</div>
+						
+						<div class="service-card">
+							<div class="icon">☁️</div>
+							<h3>Cloud Solutions</h3>
+							<p>Strategic cloud implementation and migration services to enhance accessibility and scalability.</p>
+						</div>
+					</div>
+				</section>
 				
-				<section class="contact-section" id="contact">
+				<!-- About Section -->
+				<section class="about-preview animate-in delay-2">
+					<h2>Why Choose Morris IT Consulting</h2>
+					<p>
+						With over a decade of experience in the IT industry, I deliver tailored solutions that align with your business objectives and technical requirements. As a veteran-owned business, I bring military-grade precision and discipline to every project.
+					</p>
+					<div class="cta-box">
+						<a href="/about" class="primary-btn">Learn More About My Approach</a>
+					</div>
+				</section>
+				
+				<!-- Contact Section -->
+				<section class="contact-section animate-in delay-3" id="contact">
 					<h2>Contact Me</h2>
 					<p>Let's discuss how I can help address your IT challenges. Fill out the form below, and I'll get back to you promptly.</p>
 					
 					<form class="contact-form" action="https://formspree.io/f/xjkyoqna" method="POST">
-						<div class="form-group">
-							<label for="name">Name</label>
-							<input type="text" id="name" name="name" required>
-						</div>
-						
-						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="email" id="email" name="email" required>
+						<div class="form-row">
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" id="name" name="name" required>
+							</div>
+							
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="email" id="email" name="email" required>
+							</div>
 						</div>
 						
 						<div class="form-group">
