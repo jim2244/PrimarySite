@@ -1101,4 +1101,58 @@ h3[id="why-choose-a-veteran-owned-business"] {
   .contact-section {
     padding: 1.5rem 1rem;
   }
+  
+}
+/* Add these new styles to your global.css file */
+
+/* Main Content Container Styles */
+.main-content {
+  max-width: 720px;
+  margin: 0 auto;
+  display: block; /* Ensures proper block formatting context */
+  overflow: hidden; /* Prevents margin collapse */
+}
+
+.main-content h1 {
+  clear: both; /* Ensures proper placement */
+}
+
+.main-content h2 {
+  clear: both; /* Ensures proper placement */
+}
+
+.main-content h3 {
+  color: var(--primary-light);
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  clear: both; /* Ensures headings don't float alongside grid elements */
+  width: 100%; /* Full width to prevent wrapping issues */
+  display: block; /* Force block display */
+}
+
+.main-content p {
+  margin-bottom: 1.8rem;
+  line-height: 1.8;
+  clear: both; /* Prevents paragraphs from floating alongside grid elements */
+}
+
+/* Ensure the services grid has proper spacing and layout */
+.main-content .services {
+  margin: 3rem 0;
+  width: 100%;
+  clear: both;
+}
+
+/* Adjusting the contact section within main-content */
+.main-content .contact-section {
+  clear: both;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+/* Responsive adjustments for the main content area */
+@media (max-width: 768px) {
+  .main-content {
+    max-width: 100%;
+  }
 }
