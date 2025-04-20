@@ -429,20 +429,7 @@ hr {
 
 .service-card p {
   flex-grow: 1;
-  margin-bottom: 1.5rem;
-}
-
-.service-link {
-  align-self: flex-start;
-  color: var(--primary-light);
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid transparent;
-}
-
-.service-link:hover {
-  color: var(--accent);
-  transform: translateX(5px);
+  margin-bottom: 0;
 }
 
 .services {
@@ -450,6 +437,7 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
+  width: 100%;
 }
 
 /* Contact Section */
@@ -466,6 +454,7 @@ hr {
   display: grid;
   gap: 1.5rem;
   max-width: 700px;
+  margin: 0 auto;
 }
 
 /* Hero Section */
