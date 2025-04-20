@@ -761,28 +761,50 @@ footer .social-links {
   margin-top: 1.5rem;
 }
 
-/* About Page Styles */
+/* About Page Styles - Fixed Skills Grid */
 .about-section {
   max-width: 720px;
   margin: 0 auto;
+  display: block; /* Ensures proper block formatting context */
+  overflow: hidden; /* Prevents margin collapse */
+}
+
+.about-section h2 {
+  clear: both; /* Ensures proper placement */
 }
 
 .about-section h3 {
   color: var(--primary-light);
   margin-top: 3rem;
   margin-bottom: 1.2rem;
+  clear: both; /* Ensures headings don't float alongside grid elements */
+  width: 100%; /* Full width to prevent wrapping issues */
+  display: block; /* Force block display */
 }
 
 .about-section p {
   margin-bottom: 1.8rem;
   line-height: 1.8;
+  clear: both; /* Prevents paragraphs from floating alongside grid elements */
 }
 
+/* Fixed skills grid that prevents overlapping */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
+  width: 100%;
+  clear: both; /* Ensures the grid doesn't overlap with other elements */
+  overflow: hidden; /* Contains floated children */
+  position: relative; /* Creates a new stacking context */
+}
+
+/* For smaller screens, force a single column layout */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-category {
@@ -791,7 +813,10 @@ footer .social-links {
   padding: 1.8rem;
   border: 1px solid rgba(var(--gray), 0.2);
   box-shadow: var(--box-shadow);
-  height: 100%;
+  height: auto; /* Changed from 100% to auto to prevent stretching */
+  min-height: 200px; /* Minimum height to ensure consistent appearance */
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-category h4 {
@@ -818,6 +843,7 @@ footer .social-links {
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
   list-style-type: none;
+  flex: 1; /* Allow the list to take up remaining space in the flex container */
 }
 
 .skill-category li {
@@ -834,7 +860,29 @@ footer .social-links {
   color: var(--primary-light);
 }
 
+/* Additional styles to ensure clear section separation */
+.about-section > h3:not(:first-child) {
+  margin-top: 4rem; /* More space before new sections */
+  padding-top: 1rem; /* Additional padding at the top */
+  border-top: 1px solid rgba(var(--gray), 0.2); /* Subtle divider */
+}
+
+/* Fix for the My Approach section appearing below the skills grid */
+h3#my-approach, 
+h3[id="my-approach"],
+h3#why-choose-a-veteran-owned-business,
+h3[id="why-choose-a-veteran-owned-business"] {
+  clear: both;
+  margin-top: 4rem !important;
+  padding-top: 1rem;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure proper layout for CTA section */
 .cta-section {
+  clear: both;
   margin-top: 3rem;
   padding: 2.5rem;
   background: var(--card-gradient);
@@ -842,26 +890,6 @@ footer .social-links {
   text-align: center;
   border: 1px solid rgba(var(--gray), 0.2);
   box-shadow: var(--box-shadow);
-}
-
-.cta-button {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 12px 28px;
-  border-radius: 6px;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.cta-button:hover {
-  background: var(--primary-light);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  border-bottom: none;
 }
 
 /* Layout improvements for blog posts */
