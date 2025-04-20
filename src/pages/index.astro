@@ -8,64 +8,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.services {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-				gap: 2rem;
-				margin: 2.5rem 0;
-			}
-			
-			.service-card {
-				background-color: var(--card-bg);
-				border-radius: 8px;
-				padding: 1.5rem;
-				box-shadow: var(--box-shadow);
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-				border: 1px solid rgba(var(--gray), 0.1);
-			}
-			
-			.service-card:hover {
-				transform: translateY(-5px);
-				box-shadow: var(--box-shadow), var(--neon-glow);
-			}
-			
-			.service-card h3 {
-				color: var(--accent);
-				margin-top: 0;
-			}
-			
-			.icon {
-				font-size: 2rem;
-				margin-bottom: 1rem;
-				color: var(--accent);
-			}
-			
-			.contact-section {
-				background-color: var(--card-bg);
-				padding: 2rem;
-				border-radius: 8px;
-				margin-top: 3rem;
-				border: 1px solid rgba(var(--gray), 0.1);
-			}
-			
-			.contact-form {
-				display: grid;
-				gap: 1rem;
-				max-width: 600px;
-			}
-			
-			.form-group {
-				display: flex;
-				flex-direction: column;
-			}
-			
-			label {
-				margin-bottom: 0.5rem;
-				font-weight: 500;
-				color: rgb(var(--text));
-			}
-		</style>
 	</head>
 	<body>
 		<Header />
