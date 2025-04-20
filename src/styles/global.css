@@ -189,7 +189,7 @@ p {
 }
 
 .section--about-preview {
-  background-color: var(--bg-darker);
+  background-color: var(--bg-card);
   text-align: center;
   padding: var(--spacing-xxl) 0;
   width: 100%;
