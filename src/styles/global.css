@@ -314,6 +314,7 @@ p {
   margin: var(--spacing-xl) 0;
   width: 100%;
   background-color: inherit;
+  text-align: center;
 }
 
 .service-card {
