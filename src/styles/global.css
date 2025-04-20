@@ -217,7 +217,8 @@ p {
 }
 
 .section__text {
-  margin-bottom: var(--spacing-xl);
+   margin-bottom: var(--spacing-xl);
+   text-align: center;
 }
 
 /* ======= HERO SECTION ======= */
