@@ -29,12 +29,12 @@
   --success-color: #2ecc71;
   --warning-color: #f1c40f;
   
-  /* Dark Theme Specific Colors */
-  --bg-dark: #121212; /* Main background */
-  --bg-darker: #0a0a0a; /* Darker elements */
-  --bg-card: #1e1e1e; /* Card backgrounds */
-  --bg-card-hover: #2a2a2a; /* Card hover state */
-  --border-color: #333; /* Border color for elements */
+  /* Dark Theme Specific Colors - Updated to avoid black backgrounds */
+  --bg-dark: #1e1e1e; /* Main background - Changed from #121212 to dark gray */
+  --bg-darker: #181818; /* Darker elements - Changed from #0a0a0a to dark gray */
+  --bg-card: #262626; /* Card backgrounds - Changed from #1e1e1e */
+  --bg-card-hover: #323232; /* Card hover state - Changed from #2a2a2a */
+  --border-color: #383838; /* Border color for elements - Changed from #333 */
   
   /* Typography */
   --heading-font: 'Montserrat', sans-serif;
@@ -83,6 +83,10 @@ main {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: var(--spacing-md);
+}
+
+div {
+  background-color: inherit; /* Ensure all divs inherit background color */
 }
 
 img {
@@ -157,12 +161,14 @@ p {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  background-color: inherit;
 }
 
 /* ======= SECTIONS ======= */
 .section {
   padding: var(--spacing-xxxl) 0;
   width: 100%;
+  background-color: inherit;
 }
 
 .section--hero {
@@ -244,6 +250,7 @@ p {
   text-align: center;
   padding: var(--spacing-md);
   width: 100%;
+  background-color: inherit;
 }
 
 .hero__title {
@@ -265,6 +272,7 @@ p {
   justify-content: center;
   gap: var(--spacing-md);
   flex-wrap: wrap;
+  background-color: inherit;
 }
 
 /* ======= CARDS ======= */
@@ -302,6 +310,7 @@ p {
   gap: var(--spacing-xl);
   margin: var(--spacing-xl) 0;
   width: 100%;
+  background-color: inherit;
 }
 
 .service-card {
@@ -428,6 +437,7 @@ p {
   max-width: 700px;
   margin: var(--spacing-xl) auto;
   width: 100%;
+  background-color: inherit;
 }
 
 .form-row {
@@ -436,11 +446,13 @@ p {
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-md);
   width: 100%;
+  background-color: inherit;
 }
 
 .form-group {
   margin-bottom: var(--spacing-xl);
   width: 100%;
+  background-color: inherit;
 }
 
 .form-label {
@@ -517,7 +529,10 @@ p {
 
 .d-none { display: none; }
 .d-block { display: block; }
-.d-flex { display: flex; }
+.d-flex { 
+  display: flex;
+  background-color: inherit;
+}
 
 .flex-column { flex-direction: column; }
 .justify-center { justify-content: center; }
@@ -587,6 +602,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-md) 0;
+  background-color: inherit;
 }
 
 .header__logo {
@@ -606,6 +622,7 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: inherit;
 }
 
 .nav__item {
@@ -633,6 +650,10 @@ p {
   cursor: pointer;
 }
 
+.mobile-menu.active .nav__list {
+  background-color: var(--bg-darker); /* Ensure mobile menu has proper background */
+}
+
 /* ======= FOOTER ======= */
 .footer {
   background-color: var(--bg-darker);
@@ -646,10 +667,12 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-xl);
+  background-color: inherit;
 }
 
 .footer__column {
   margin-bottom: var(--spacing-xl);
+  background-color: inherit;
 }
 
 .footer__title {
@@ -662,6 +685,7 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: inherit;
 }
 
 .footer__item {
@@ -687,6 +711,7 @@ p {
   display: flex;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
+  background-color: inherit;
 }
 
 .social-link {
@@ -712,6 +737,7 @@ p {
   padding-top: var(--spacing-lg);
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: inherit;
 }
 
 .footer__copyright {
@@ -724,11 +750,13 @@ p {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: var(--spacing-md);
+  background-color: inherit;
 }
 
 .blog-post__header {
   margin-bottom: var(--spacing-xxl);
   text-align: center;
+  background-color: inherit;
 }
 
 .blog-post__title {
@@ -749,108 +777,32 @@ p {
 
 .blog-post__content {
   line-height: 1.8;
+  background-color: inherit;
 }
 
-/* ======= MEDIA QUERIES ======= */
-@media (max-width: 991px) {
-  html {
-    font-size: 15px;
-  }
-  
-  .section {
-    padding: var(--spacing-xxl) 0;
-  }
-  
-  main {
-    max-width: 100%;
-    padding: var(--spacing-md);
-  }
+/* Astro-specific components */
+.prose {
+  background-color: inherit;
 }
 
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-  
-  h1 {
-    font-size: 2.25rem;
-  }
-  
-  h2 {
-    font-size: 1.75rem;
-  }
-  
-  .hero__title {
-    font-size: 2.5rem;
-  }
-  
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .nav__list {
-    display: none;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-  
-  .mobile-menu.active .nav__list {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--bg-darker);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    padding: var(--spacing-md);
-    border: 1px solid var(--border-color);
-  }
-  
-  .mobile-menu.active .nav__item {
-    margin: var(--spacing-sm) 0;
-  }
-  
-  main {
-    max-width: 100%;
-    padding: var(--spacing-md);
-  }
+.title {
+  background-color: inherit;
 }
 
-@media (max-width: 576px) {
-  .section {
-    padding: var(--spacing-xl) 0;
-  }
-  
-  .hero {
-    padding: var(--spacing-xl) var(--spacing-sm);
-  }
-  
-  .hero__title {
-    font-size: 2rem;
-  }
-  
-  .hero__tagline {
-    font-size: 1.1rem;
-  }
-  
-  .btn {
-    padding: 0.6rem 1.2rem;
-  }
-  
-  .footer__container {
-    grid-template-columns: 1fr;
-  }
-  
-  main {
-    padding: var(--spacing-sm);
-  }
+.date {
+  background-color: inherit;
+}
+
+.hero-image {
+  background-color: inherit;
+}
+
+article {
+  background-color: inherit;
+}
+
+.last-updated-on {
+  background-color: inherit;
 }
 
 /* Add these styles for header component */
@@ -872,6 +824,7 @@ header nav {
   max-width: var(--container-max-width);
   margin: 0 auto;
   width: 100%;
+  background-color: inherit;
 }
 
 header h2 {
@@ -889,17 +842,19 @@ header h2 a {
 .internal-links {
   display: flex;
   gap: var(--spacing-lg);
+  background-color: inherit;
 }
 
 .social-links {
   display: flex;
+  background-color: inherit;
 }
 
 /* Astro blog layout-specific styles */
 footer {
   width: 100%;
   padding: 2em 1em 6em 1em;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  background-color: var(--bg-darker);
   color: rgb(var(--gray));
   text-align: center;
 }
