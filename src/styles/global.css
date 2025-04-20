@@ -778,3 +778,58 @@ p {
     grid-template-columns: 1fr;
   }
 }
+/* Add these styles to your global.css file */
+
+header {
+  background-color: var(--bg-darker);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-md);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+header h2 {
+  margin-bottom: 0;
+}
+
+header h2 a {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.internal-links {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.social-links {
+  display: flex;
+}
+
+/* Media query to handle responsive behavior */
+@media (max-width: 768px) {
+  header nav {
+    flex-wrap: wrap;
+  }
+  
+  .internal-links {
+    order: 3;
+    width: 100%;
+    margin-top: var(--spacing-sm);
+    justify-content: center;
+  }
+}
