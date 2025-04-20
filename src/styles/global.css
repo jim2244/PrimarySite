@@ -234,6 +234,7 @@ p {
 .text-center .section__title::after {
   left: 50%;
   transform: translateX(-50%);
+  text-align: center;
 }
 
 .section__subtitle {
