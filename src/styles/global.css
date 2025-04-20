@@ -1,6 +1,7 @@
 /* 
    Global CSS for Morris IT Consulting
    A comprehensive stylesheet for consistent styling across all pages
+   DARK THEME VERSION
 */
 
 /* ======= RESET & BASE STYLES ======= */
@@ -11,22 +12,29 @@
 }
 
 :root {
-  /* Color Variables */
-  --primary-color: #0056b3;
-  --primary-dark: #004494;
-  --primary-light: #3378c2;
-  --secondary-color: #6c757d;
-  --secondary-dark: #5a6268;
-  --secondary-light: #868e96;
-  --accent-color: #28a745;
-  --light-color: #f8f9fa;
-  --light-gray: #e9ecef;
-  --medium-gray: #ced4da;
-  --dark-color: #343a40;
-  --text-color: #212529;
-  --error-color: #dc3545;
-  --success-color: #198754;
-  --warning-color: #ffc107;
+  /* Color Variables - DARK THEME */
+  --primary-color: #4d9cff; /* Lighter blue for dark background */
+  --primary-dark: #3378c2;
+  --primary-light: #7db8ff;
+  --secondary-color: #909faa;
+  --secondary-dark: #6c757d;
+  --secondary-light: #a9b6c2;
+  --accent-color: #2ecc71; /* Brighter green for visibility */
+  --light-color: #e9ecef;
+  --light-gray: #ced4da;
+  --medium-gray: #6c757d;
+  --dark-color: #212529;
+  --text-color: #e9ecef; /* Light text for dark backgrounds */
+  --error-color: #ff5757;
+  --success-color: #2ecc71;
+  --warning-color: #f1c40f;
+  
+  /* Dark Theme Specific Colors */
+  --bg-dark: #121212; /* Main background */
+  --bg-darker: #0a0a0a; /* Darker elements */
+  --bg-card: #1e1e1e; /* Card backgrounds */
+  --bg-card-hover: #2a2a2a; /* Card hover state */
+  --border-color: #333; /* Border color for elements */
   
   /* Typography */
   --heading-font: 'Montserrat', sans-serif;
@@ -46,8 +54,8 @@
   /* Borders & Effects */
   --border-radius: 5px;
   --border-radius-lg: 8px;
-  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --box-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --box-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
   --transition: all 0.3s ease;
   
   /* Container Width */
@@ -63,7 +71,7 @@ body {
   font-family: var(--body-font);
   color: var(--text-color);
   line-height: var(--line-height);
-  background-color: #fff;
+  background-color: var(--bg-dark);
 }
 
 img {
@@ -79,7 +87,7 @@ a {
 }
 
 a:hover {
-  color: var(--primary-dark);
+  color: var(--primary-light);
 }
 
 ul, ol {
@@ -93,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-md);
-  color: var(--dark-color);
+  color: var(--light-color);
 }
 
 h1 {
@@ -147,26 +155,26 @@ p {
 
 .section--hero {
   padding: var(--spacing-xxxl) 0;
-  background-color: var(--light-color);
+  background-color: var(--bg-darker);
   text-align: center;
 }
 
 .section--services {
-  background-color: #fff;
+  background-color: var(--bg-dark);
 }
 
 .section--about {
-  background-color: var(--light-color);
+  background-color: var(--bg-darker);
 }
 
 .section--about-preview {
-  background-color: var(--light-color);
+  background-color: var(--bg-darker);
   text-align: center;
   padding: var(--spacing-xxl) 0;
 }
 
 .section--contact {
-  background-color: #fff;
+  background-color: var(--bg-dark);
 }
 
 .section__title {
@@ -205,7 +213,7 @@ p {
 .section__subtitle {
   font-size: 1.5rem;
   margin: var(--spacing-xl) 0 var(--spacing-md);
-  color: var(--dark-color);
+  color: var(--light-color);
 }
 
 .section__text {
@@ -241,17 +249,19 @@ p {
 
 /* ======= CARDS ======= */
 .card {
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-radius: var(--border-radius);
   padding: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
+  border: 1px solid var(--border-color);
 }
 
 .card:hover {
   box-shadow: var(--box-shadow-lg);
   transform: translateY(-3px);
+  background-color: var(--bg-card-hover);
 }
 
 .card__title {
@@ -273,7 +283,7 @@ p {
 }
 
 .service-card {
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-radius: var(--border-radius);
   padding: var(--spacing-xl);
   box-shadow: var(--box-shadow);
@@ -281,11 +291,13 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-color);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-lg);
+  background-color: var(--bg-card-hover);
 }
 
 .service-card__icon {
@@ -320,12 +332,13 @@ p {
 
 /* ======= CTA ======= */
 .cta {
-  background-color: var(--light-color);
+  background-color: var(--bg-card);
   border-radius: var(--border-radius);
   padding: var(--spacing-xl);
   text-align: center;
   margin: var(--spacing-xl) 0;
   box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
 }
 
 .cta__text {
@@ -350,23 +363,23 @@ p {
 
 .btn--primary {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--bg-darker);
 }
 
 .btn--primary:hover {
-  background-color: var(--primary-dark);
-  box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2);
+  background-color: var(--primary-light);
+  box-shadow: 0 5px 15px rgba(77, 156, 255, 0.3);
   transform: translateY(-2px);
 }
 
 .btn--secondary {
   background-color: var(--secondary-color);
-  color: white;
+  color: var(--bg-darker);
 }
 
 .btn--secondary:hover {
-  background-color: var(--secondary-dark);
-  box-shadow: 0 5px 15px rgba(108, 117, 125, 0.2);
+  background-color: var(--secondary-light);
+  box-shadow: 0 5px 15px rgba(144, 159, 170, 0.3);
   transform: translateY(-2px);
 }
 
@@ -378,7 +391,7 @@ p {
 
 .btn--outline:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--bg-darker);
   transform: translateY(-2px);
 }
 
@@ -414,18 +427,20 @@ p {
 .form-textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid var(--medium-gray);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   font-family: var(--body-font);
   transition: var(--transition);
   font-size: 1rem;
+  background-color: var(--bg-card);
+  color: var(--text-color);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+  box-shadow: 0 0 0 2px rgba(77, 156, 255, 0.2);
 }
 
 .form-textarea {
@@ -462,7 +477,7 @@ p {
 .text-accent { color: var(--accent-color); }
 .text-light { color: var(--light-color); }
 .text-dark { color: var(--dark-color); }
-.text-muted { color: var(--secondary-color); }
+.text-muted { color: var(--secondary-light); }
 
 .bg-primary { background-color: var(--primary-color); }
 .bg-secondary { background-color: var(--secondary-color); }
@@ -532,11 +547,12 @@ p {
 
 /* ======= HEADER ======= */
 .header {
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-darker);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header__container {
@@ -570,7 +586,7 @@ p {
 }
 
 .nav__link {
-  color: var(--dark-color);
+  color: var(--light-color);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition);
@@ -586,15 +602,16 @@ p {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--dark-color);
+  color: var(--light-color);
   cursor: pointer;
 }
 
 /* ======= FOOTER ======= */
 .footer {
-  background-color: var(--dark-color);
+  background-color: var(--bg-darker);
   color: #fff;
   padding: var(--spacing-xxl) 0;
+  border-top: 1px solid var(--border-color);
 }
 
 .footer__container {
@@ -630,7 +647,7 @@ p {
 }
 
 .footer__link:hover {
-  color: #fff;
+  color: var(--primary-light);
   text-decoration: underline;
 }
 
@@ -658,7 +675,7 @@ p {
 
 .social-link:hover {
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--bg-darker);
   transform: translateY(-3px);
 }
 
@@ -725,9 +742,10 @@ p {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-darker);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
   }
   
   .mobile-menu.active .nav__item {
