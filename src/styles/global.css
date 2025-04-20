@@ -2,21 +2,35 @@
   Tech-themed dark mode CSS for IT services website
  */
 :root {
+  /* Primary colors */
   --accent: #00b8ff;
   --accent-dark: #0077cc;
   --accent-glow: rgba(0, 184, 255, 0.15);
+  
+  /* Background colors */
   --black: 10, 12, 16;
   --gray: 150, 155, 165;
   --gray-light: 40, 45, 55;
   --gray-dark: 25, 30, 40;
   --background: 15, 20, 30;
-  --text: 240, 245, 255; /* Brightened text color for better contrast */
+  
+  /* Text colors */
+  --text: 240, 245, 255;
+  --text-muted: 180, 185, 200;
+  
+  /* Code colors */
   --code-bg: 30, 35, 50;
+  
+  /* Effects */
   --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4),
     0 8px 24px rgba(0, 0, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.2);
   --neon-glow: 0 0 5px rgba(0, 184, 255, 0.2), 
     0 0 20px rgba(0, 184, 255, 0.1);
-  --card-bg: rgba(35, 40, 50, 0.7); /* Brighter background for cards */
+  
+  /* Component backgrounds */
+  --card-bg: rgba(35, 40, 50, 0.7);
+  --header-bg: rgba(10, 12, 16, 0.8);
+  --nav-height: 60px;
 }
 
 @font-face {
@@ -50,7 +64,7 @@ body {
   color: rgb(var(--text));
   font-size: 18px;
   line-height: 1.7;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Text shadow for better readability */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
 main {
@@ -78,19 +92,19 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); /* Added drop shadow for better visibility */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
 h2 {
   font-size: 2.441em;
   color: var(--accent);
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5)); /* Added drop shadow for better visibility */
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5));
 }
 
 h3 {
   font-size: 1.953em;
-  color: var(--accent); /* Explicitly setting h3 to accent color */
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); /* Added drop shadow for better visibility */
+  color: var(--accent);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
 }
 
 h4 {
@@ -122,7 +136,7 @@ a:hover {
 
 p {
   margin-bottom: 1em;
-  color: rgb(var(--text)); /* Explicitly setting paragraph color */
+  color: rgb(var(--text));
 }
 
 .prose p {
@@ -254,59 +268,130 @@ hr {
 
 /* Header and Navigation */
 header {
-  background-color: rgba(var(--black), 0.9);
+  margin: 0;
+  padding: 0 1em;
+  background-color: var(--header-bg);
   backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(var(--gray), 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-nav a {
-  margin: 0 1em;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0.5em 0;
-  font-weight: 500;
+  height: var(--nav-height);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+h2 a,
+h2 a.active {
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h2 a:hover {
+  color: white;
+  text-shadow: var(--neon-glow);
+}
+
+nav a {
+  padding: 1em 0.5em;
+  color: rgba(var(--text), 0.9);
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+  text-shadow: var(--neon-glow);
+}
+
+nav a.active {
+  text-decoration: none;
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+.internal-links {
+  display: flex;
+  gap: 0.5em;
+}
+
+.social-links,
+.social-links a {
+  display: flex;
 }
 
 .social-links a {
-  opacity: 0.8;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  margin: 0 0.5rem;
-  display: inline-flex;
+  color: var(--accent);
+  opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
   opacity: 1;
+  color: white;
   transform: translateY(-2px);
   border-bottom: none;
 }
 
 .social-links svg {
-  fill: currentColor;
   overflow: visible;
-  margin: 2px;
-}
-
-/* Footer */
-footer {
-  margin-top: 3em;
-  padding: 2em 0;
-  text-align: center;
-  color: rgba(var(--text), 0.7);
-  font-size: 0.9em;
-  border-top: 1px solid rgba(var(--gray), 0.2);
 }
 
 @media (max-width: 720px) {
   body {
     font-size: 16px;
   }
+  
   main {
     padding: 1em;
   }
+  
   h1 {
     font-size: 2.5em;
   }
+  
+  .social-links {
+    display: none;
+  }
+  
+  nav {
+    flex-wrap: wrap;
+  }
+  
+  .internal-links {
+    order: 3;
+    width: 100%;
+    margin-top: 0.5em;
+    justify-content: center;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 2em 1em 6em 1em;
+  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  color: rgb(var(--gray));
+  text-align: center;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
 }
 
 .sr-only {
