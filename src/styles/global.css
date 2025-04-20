@@ -173,7 +173,7 @@ p {
 
 .section--hero {
   padding: var(--spacing-xxxl) 0;
-  background-color: var(--bg-darker);
+  background-color: var(--bg-dark);
   text-align: center;
   width: 100%;
 }
