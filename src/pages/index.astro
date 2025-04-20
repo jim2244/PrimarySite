@@ -12,63 +12,65 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Professional IT Services</h1>
-			<p>
-				Welcome to my professional IT services. I provide reliable, efficient, and customized technology solutions to help your business thrive in today's digital environment. <br/><a href="#contact">Contact us now!</a>
-			</p>
-			
-			<div class="services">
-				<div class="service-card">
-					<div class="icon">💻</div>
-					<h3>Technical Support</h3>
-					<p>Responsive troubleshooting and technical assistance for all your hardware and software needs, with minimal downtime.</p>
+			<div class="main-content">
+				<h1>Professional IT Services</h1>
+				<p>
+					Welcome to my professional IT services. I provide reliable, efficient, and customized technology solutions to help your business thrive in today's digital environment. <br/><a href="#contact">Contact us now!</a>
+				</p>
+				
+				<div class="services">
+					<div class="service-card">
+						<div class="icon">💻</div>
+						<h3>Technical Support</h3>
+						<p>Responsive troubleshooting and technical assistance for all your hardware and software needs, with minimal downtime.</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="icon">🔒</div>
+						<h3>Network Security</h3>
+						<p>Comprehensive security solutions to protect your business data and infrastructure from evolving threats.</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="icon">☁️</div>
+						<h3>Cloud Solutions</h3>
+						<p>Strategic cloud implementation and migration services to enhance accessibility and scalability.</p>
+					</div>
 				</div>
 				
-				<div class="service-card">
-					<div class="icon">🔒</div>
-					<h3>Network Security</h3>
-					<p>Comprehensive security solutions to protect your business data and infrastructure from evolving threats.</p>
-				</div>
+				<p>
+					<br /><br />With years of experience in the IT industry, I deliver tailored solutions that align with your business objectives and technical requirements.
+				</p>
 				
-				<div class="service-card">
-					<div class="icon">☁️</div>
-					<h3>Cloud Solutions</h3>
-					<p>Strategic cloud implementation and migration services to enhance accessibility and scalability.</p>
-				</div>
+				<section class="contact-section" id="contact">
+					<h2>Contact Me</h2>
+					<p>Let's discuss how I can help address your IT challenges. Fill out the form below, and I'll get back to you promptly.</p>
+					
+					<form class="contact-form" action="https://formspree.io/f/xjkyoqna" method="POST">
+						<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						
+						<div class="form-group">
+							<label for="subject">Subject</label>
+							<input type="text" id="subject" name="subject">
+						</div>
+						
+						<div class="form-group">
+							<label for="message">Message</label>
+							<textarea id="message" name="message" rows="5" required></textarea>
+						</div>
+						
+						<button type="submit">Send Message</button>
+					</form>
+				</section>
 			</div>
-			
-			<p>
-				<br /><br />With years of experience in the IT industry, I deliver tailored solutions that align with your business objectives and technical requirements.
-			</p>
-			
-			<section class="contact-section" id="contact">
-				<h2>Contact Me</h2>
-				<p>Let's discuss how I can help address your IT challenges. Fill out the form below, and I'll get back to you promptly.</p>
-				
-				<form class="contact-form" action="https://formspree.io/f/xjkyoqna" method="POST">
-					<div class="form-group">
-						<label for="name">Name</label>
-						<input type="text" id="name" name="name" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="email">Email</label>
-						<input type="email" id="email" name="email" required>
-					</div>
-					
-					<div class="form-group">
-						<label for="subject">Subject</label>
-						<input type="text" id="subject" name="subject">
-					</div>
-					
-					<div class="form-group">
-						<label for="message">Message</label>
-						<textarea id="message" name="message" rows="5" required></textarea>
-					</div>
-					
-					<button type="submit">Send Message</button>
-				</form>
-			</section>
 		</main>
 		<Footer />
 	</body>
