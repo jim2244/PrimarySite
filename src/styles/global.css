@@ -376,15 +376,54 @@ hr {
 .service-card {
   background: var(--card-gradient);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.8rem;
+  border: 1px solid rgba(var(--gray), 0.2);
   box-shadow: var(--box-shadow);
-  padding: 2.5rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
+  height: auto; /* Changed from 100% to auto to prevent stretching */
+  min-height: 200px; /* Minimum height to ensure consistent appearance */
   display: flex;
   flex-direction: column;
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: var(--primary-light);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.service-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 1.5px;
+}
+
+.service-card ul {
+  padding-left: 1.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+  flex: 1; /* Allow the list to take up remaining space in the flex container */
+}
+
+.service-card li {
+  color: rgba(var(--text), 0.9);
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.service-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary-light);
 }
 
 .service-card::before {
@@ -409,12 +448,6 @@ hr {
   box-shadow: var(--box-shadow), var(--neon-glow);
 }
 
-.service-card h3 {
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  color: white;
-}
-
 .service-card .icon {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -436,8 +469,11 @@ hr {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin: 3.5rem 0;
+  margin: 3rem 0;
   width: 100%;
+  clear: both; /* Ensures the grid doesn't overlap with other elements */
+  overflow: hidden; /* Contains floated children */
+  position: relative; /* Creates a new stacking context */
 }
 
 /* Contact Section */
